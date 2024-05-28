@@ -544,7 +544,7 @@ const handleMapReady = () => {
               );
             })}
             {activeEvent && (
-                <Popup className="sm:max-w-32" ref={popupElRef} position={activeEvent.position}  closeButton={true} eventHandlers={{
+                <Popup  ref={popupElRef} position={activeEvent.position}  closeButton={true} eventHandlers={{
                 remove: () => {
                   setActiveEvent(null);
 
