@@ -4,9 +4,11 @@ import { ReactNode } from "react";
 export default function AnimatedGradientText({
   children,
   className,
+  onClick,
 }: {
   children: ReactNode;
   className?: string;
+  onClick?: () => void;
 }) {
   return (
     <div

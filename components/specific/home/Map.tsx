@@ -488,10 +488,8 @@ const handleListItemClick = (eventId: number) => {
     setActiveEvent(event);
   }
 };
-console.log(activeEvent)
 
 const handleClickFavoris = (eventId:number) => {
-  console.log('ajout favoris', eventId)
 
   let updatedFavoris = favoris.filter((id) => id !== eventId);
   if(!favoris.includes(eventId)){
@@ -549,7 +547,6 @@ const handleMapReady = () => {
                 <Popup ref={popupElRef} position={activeEvent.position}  closeButton={true} eventHandlers={{
                 remove: () => {
                   setActiveEvent(null);
-                  console.log('remove active event', activeEvent)
 
                  },
                 
@@ -582,13 +579,13 @@ const handleMapReady = () => {
               )}
           </MapContainer>
         </div>
-      <div className='liked-events  flex flex-col  grow-2'>
-        <h2 className=" text-2xl mb-5">
+      <div className='liked-events  sm:min-w-80 md:min-w-[27rem] flex flex-col  grow-2'>
+        <div className="rounded-md border border-gray-200 dark:border-gray-800 dark:hover:bg-gray-800 text-2xl p-5 mb-2">
         <span role="img" aria-label="heart" className="">
                   ⭐ Evenement(s) favoris
-        </span></h2>
+        </span></div>
        
-         <div className="flex-1 overflow-y-auto  max-h-500px">
+         <div className="flex-1 overflow-y-auto  rounded-md border border-gray-200 dark:border-gray-800 dark:hover:bg-gray-800 max-h-500px">
           <div className="container-fav flex flex-col gap-4 p-4  ">
           {favoris
             .map((id) => {
@@ -614,96 +611,7 @@ const handleMapReady = () => {
               </div>
               );
             })}
-            {/* <div className="flex flex-col items-start gap-2 rounded-md border border-gray-200 p-4 text-sm transition-all hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800">
-                  
-                  <div className="flex w-full items-center gap-1">
-                    <Star className='mr-6'/>
-                    <div >Titre</div>
-                    <div className="ml-auto text-xs text-gray-500 dark:text-gray-400">XXXX</div>
-                </div>
-                <div className="line-clamp-2 text-gray-500 dark:text-gray-400">Allied forces landed on the beaches of Normandy, France on June 6, 1944, marking a pivotal turn in World War II.</div>
-               
-              </div>
-              <div className="flex flex-col items-start gap-2 rounded-md border border-gray-200 p-4 text-sm transition-all hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800">
-                  
-                  <div className="flex w-full items-center gap-1">
-                    <Star className='mr-6'/>
-                    <div >Titre</div>
-                    <div className="ml-auto text-xs text-gray-500 dark:text-gray-400">XXXX</div>
-                </div>
-                <div className="line-clamp-2 text-gray-500 dark:text-gray-400">Allied forces landed on the beaches of Normandy, France on June 6, 1944, marking a pivotal turn in World War II.</div>
-               
-              </div>
-              <div className="flex flex-col items-start gap-2 rounded-md border border-gray-200 p-4 text-sm transition-all hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800">
-                  
-                  <div className="flex w-full items-center gap-1">
-                    <Star className='mr-6'/>
-                    <div >Titre</div>
-                    <div className="ml-auto text-xs text-gray-500 dark:text-gray-400">XXXX</div>
-                </div>
-                <div className="line-clamp-2 text-gray-500 dark:text-gray-400">Allied forces landed on the beaches of Normandy, France on June 6, 1944, marking a pivotal turn in World War II.</div>
-               
-              </div>
-              <div className="flex flex-col items-start gap-2 rounded-md border border-gray-200 p-4 text-sm transition-all hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800">
-                  
-                  <div className="flex w-full items-center gap-1">
-                    <Star className='mr-6'/>
-                    <div >Titre</div>
-                    <div className="ml-auto text-xs text-gray-500 dark:text-gray-400">XXXX</div>
-                </div>
-                <div className="line-clamp-2 text-gray-500 dark:text-gray-400">Allied forces landed on the beaches of Normandy, France on June 6, 1944, marking a pivotal turn in World War II.</div>
-               
-              </div>
-              <div className="flex flex-col items-start gap-2 rounded-md border border-gray-200 p-4 text-sm transition-all hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800">
-                  
-                  <div className="flex w-full items-center gap-1">
-                    <Star className='mr-6'/>
-                    <div >Titre</div>
-                    <div className="ml-auto text-xs text-gray-500 dark:text-gray-400">XXXX</div>
-                </div>
-                <div className="line-clamp-2 text-gray-500 dark:text-gray-400">Allied forces landed on the beaches of Normandy, France on June 6, 1944, marking a pivotal turn in World War II.</div>
-               
-              </div>
-              <div className="flex flex-col items-start gap-2 rounded-md border border-gray-200 p-4 text-sm transition-all hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800">
-                  
-                  <div className="flex w-full items-center gap-1">
-                    <Star className='mr-6'/>
-                    <div >Titre</div>
-                    <div className="ml-auto text-xs text-gray-500 dark:text-gray-400">XXXX</div>
-                </div>
-                <div className="line-clamp-2 text-gray-500 dark:text-gray-400">Allied forces landed on the beaches of Normandy, France on June 6, 1944, marking a pivotal turn in World War II.</div>
-               
-              </div>
-              <div className="flex flex-col items-start gap-2 rounded-md border border-gray-200 p-4 text-sm transition-all hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800">
-                  
-                  <div className="flex w-full items-center gap-1">
-                    <Star className='mr-6'/>
-                    <div >Titre</div>
-                    <div className="ml-auto text-xs text-gray-500 dark:text-gray-400">XXXX</div>
-                </div>
-                <div className="line-clamp-2 text-gray-500 dark:text-gray-400">Allied forces landed on the beaches of Normandy, France on June 6, 1944, marking a pivotal turn in World War II.</div>
-               
-              </div>
-              <div className="flex flex-col items-start gap-2 rounded-md border border-gray-200 p-4 text-sm transition-all hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800">
-                  
-                  <div className="flex w-full items-center gap-1">
-                    <Star className='mr-6'/>
-                    <div >Titre</div>
-                    <div className="ml-auto text-xs text-gray-500 dark:text-gray-400">XXXX</div>
-                </div>
-                <div className="line-clamp-2 text-gray-500 dark:text-gray-400">Allied forces landed on the beaches of Normandy, France on June 6, 1944, marking a pivotal turn in World War II.</div>
-               
-              </div>
-              <div className="flex flex-col items-start gap-2 rounded-md border border-gray-200 p-4 text-sm transition-all hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800">
-                  
-                  <div className="flex w-full items-center gap-1">
-                    <Star className='mr-6'/>
-                    <div >Titre</div>
-                    <div className="ml-auto text-xs text-gray-500 dark:text-gray-400">XXXX</div>
-                </div>
-                <div className="line-clamp-2 text-gray-500 dark:text-gray-400">Allied forces landed on the beaches of Normandy, France on June 6, 1944, marking a pivotal turn in World War II.</div>
-               
-              </div> */}
+            
            
             
           </div>
