@@ -517,7 +517,7 @@ const handleMapReady = () => {
       <div className="content max-h-500px ">
         <div className=" map-content flex flex-col flex-grow-7 gap-6 h-[600px] ">
           <Filter setSelectedCategory={setSelectedCategory} />
-            <MapContainer minZoom={2}  center={defaultPosition} className="map-container -z-1" zoom={5} scrollWheelZoom={true} >
+            <MapContainer minZoom={1}  center={defaultPosition} className="map-container -z-1" zoom={5} scrollWheelZoom={true} >
             <TileLayer
               attribution='&copy; OpenStreetMap France |&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png"
