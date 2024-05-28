@@ -544,7 +544,7 @@ const handleMapReady = () => {
               );
             })}
             {activeEvent && (
-                <Popup ref={popupElRef} position={activeEvent.position}  closeButton={true} eventHandlers={{
+                <Popup className="sm:max-w-32" ref={popupElRef} position={activeEvent.position}  closeButton={true} eventHandlers={{
                 remove: () => {
                   setActiveEvent(null);
 
@@ -552,7 +552,7 @@ const handleMapReady = () => {
                 
                 }}>
                   <div className="popup-inner flex justify-between ">
-                    <h2 className="text-primary text-lg jsu">{activeEvent.title}</h2>{/* <Button onClick={()=>handleClikClosePopup} variant="ghost" size="icon">
+                    <h2 className="text-primary text-lg ">{activeEvent.title}</h2>{/* <Button onClick={()=>handleClikClosePopup} variant="ghost" size="icon">
           <CircleX className="text-red-500" /> 
         </Button>*/}
                   </div>
@@ -575,7 +575,7 @@ const handleMapReady = () => {
             
             </Popup> )}
             {activeEvent && (
-                <FlyToMarker position={activeEvent.position} zoomLevel={8} />
+                <FlyToMarker position={activeEvent.position} zoomLevel={5} />
               )}
           </MapContainer>
         </div>

@@ -6,8 +6,9 @@ const FlyToMarker = ({ position, zoomLevel }: any) => {
 
   useEffect(() => {
     if (position) {
+      console.log("position", position);
       const zoom = zoomLevel ?? map.getZoom();
-      map.flyTo(position, zoom, {
+      map.flyTo([position[0]+3,position[1]], zoom, {
         duration: 1,
       });
     }

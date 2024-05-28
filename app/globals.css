@@ -82,7 +82,7 @@
   .popup-inner {
     &__title {
       position: relative;
-      font-size: 1.3rem;
+      font-size: 1rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
   
@@ -95,7 +95,7 @@
       &::after {
         position: absolute;
         content: "";
-        width: 35%;
+        width: 30%;
         height: 2px;
         background-color: rgb(111, 207, 151);
         bottom: -14px;
