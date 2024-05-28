@@ -78,7 +78,9 @@
     color: var(--color--white) !important;
     font-size: 1.5rem !important;
   }
-  
+  .leaflet-control{
+    opacity: 0.6;
+  }
   .popup-inner {
     &__title {
       position: relative;
