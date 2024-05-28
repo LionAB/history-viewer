@@ -544,7 +544,7 @@ const handleMapReady = () => {
               );
             })}
             {activeEvent && (
-                <Popup  ref={popupElRef} position={activeEvent.position}  closeButton={true} eventHandlers={{
+                <Popup className='w-[300px]' ref={popupElRef} position={activeEvent.position}  closeButton={true} eventHandlers={{
                 remove: () => {
                   setActiveEvent(null);
 
