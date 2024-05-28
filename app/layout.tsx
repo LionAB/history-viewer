@@ -14,7 +14,7 @@ const fontSans = FontSans({
 })
 export const metadata: Metadata = {
   title: "HistoriMap",
-  description: "An interactive map to learn about history",
+  description: "HistoriMap ,rendre la découverte de l'Histoire plus ludique.",
 };
 
 export default function RootLayout({
