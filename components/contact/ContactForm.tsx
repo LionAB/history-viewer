@@ -53,7 +53,7 @@ export default function ContactForm() {
 
     return (
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col items-center">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col items-center p-6 border rounded-sm border-rounded border-gray-200 dark:border-gray-800">
           <div className="flex flex-col space-y-4 items-center">
            <div className="flex flex-row gap-6 min-h-[150px] flex-wrap">
           <FormField
@@ -63,7 +63,7 @@ export default function ContactForm() {
               <FormItem>
                 <FormLabel>Prénom</FormLabel>
                 <FormControl>
-                  <Input size={30} placeholder="prenom" {...field} />
+                  <Input size={30}  {...field} />
                 </FormControl>
                 <FormDescription>
                   Entrez votre prénom.
@@ -79,7 +79,7 @@ export default function ContactForm() {
             <FormItem className="">
               <FormLabel>Nom</FormLabel>
               <FormControl>
-                <Input size={30} placeholder="nom" {...field} />
+                <Input size={30}  {...field} />
               </FormControl>
               <FormDescription>
                 Entrez votre nom.
@@ -96,7 +96,7 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel>Adresse mail</FormLabel>
               <FormControl>
-                <Input size={30} placeholder="email" {...field} />
+                <Input size={30} placeholder="m@exemple.com" {...field} />
               </FormControl>
               <FormDescription>
                 Entrez votre email.
@@ -111,10 +111,10 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel>Téléphone</FormLabel>
               <FormControl>
-                <Input size={30} placeholder="07..." {...field} />
+                <Input size={30}  {...field} />
               </FormControl>
               <FormDescription>
-                Entrez votre numéro.
+                Entrez votre numéro (optionnel)
               </FormDescription>
               <FormMessage />
             </FormItem>

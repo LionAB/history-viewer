@@ -69,7 +69,7 @@ export default function About(){
     Coté Dev : 
     <ul className="list-disc list-inside">
       <li>Amélioration de la gestion des événements</li>
-      <li>Intégration de monitoring grâce a Sentry</li>
+      <li>Intégration de monitoring grâce à Sentry</li>
     </ul>
     
     </div>
