@@ -12,6 +12,7 @@ const slugs = [
     "zod",
     "emailjs",
     "react-hook-form",
+    "vercel",
 
 ];
  
@@ -48,6 +49,7 @@ export default function About(){
                 <li>Tailwind CSS</li>
                 <li>Shadcn</li>
                 <li>Zod</li>
+                <li>Vercel</li>
                 
             </ul>
         </div>
